@@ -18,8 +18,15 @@ myAnsverButton.addEventListener('click', (e) => {
   og "du har svarret forkert" hvis svaret er false*/
   let myAnswer = myAnsverInput.value;
   console.log('Answer is: ' + myAnswer);
-});
 
+if (myAnswer === 'true' || myAnswer === 'true') {
+  myAnsverFeedbackElement.textContent = 'Du har svaret rigtigt';
+  myAnsverFeedbackElement.style.color = 'green';
+} else {
+  myAnsverFeedbackElement.textContent = 'Du har svaret forkert';
+  myAnsverFeedbackElement.style.color = 'red';
+}
+});
 /*Opgave 2: udkommenter opgave 1, og omskriv nu din funktion til to korrekte svar:
 nej
 ja i disney film
@@ -45,7 +52,7 @@ ja i disney film
 function validateEmail(email) {
   var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
-}
+} 
 
 /* eks på kald:
 if (validateEmail("test@example.com")) {
